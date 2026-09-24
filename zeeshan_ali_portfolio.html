@@ -1,0 +1,891 @@
+<!-- ==========================================
+     FILE: index.html
+     Zeeshan Ali - Frontend & Full Stack Developer Portfolio
+     ========================================== -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio of Zeeshan Ali, a Full Stack Developer with a frontend focus. React.js, Next.js, TypeScript, Redux Toolkit, Node.js, Express.js and MongoDB."
+    />
+    <meta name="theme-color" content="#0c1022" />
+    <title>Zeeshan Ali | Frontend &amp; Full Stack Developer</title>
+
+    <!-- Fonts: Bricolage Grotesque (headings), Inter (body), JetBrains Mono (code bits) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+      <div class="container nav-container">
+        <a href="#hero" class="nav-logo" aria-label="Zeeshan Ali, back to top">
+          <span class="logo-accent">&lt;</span>Zeeshan<span class="logo-accent"
+            >/&gt;</span
+          >
+        </a>
+
+        <nav class="nav-menu" id="nav-menu" aria-label="Main">
+          <a href="#about" class="nav-link">About</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#experience" class="nav-link">Experience</a>
+          <a href="#process" class="nav-link">Process</a>
+          <a href="#certificates" class="nav-link">Certificates</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Toggle navigation menu"
+          aria-controls="nav-menu"
+          aria-expanded="false"
+        >
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- HERO SECTION -->
+      <section id="hero" class="hero">
+        <div class="container hero-grid">
+          <!-- LEFT: profile photo inside a browser window -->
+          <div class="hero-visual">
+            <div class="browser">
+              <div class="browser-bar">
+                <span class="dots" aria-hidden="true"
+                  ><i></i><i></i><i></i
+                ></span>
+                <span class="browser-url">localhost:3000</span>
+              </div>
+              <div class="browser-body">
+                <!-- Put your photo in the same folder as index.html and name it myimage.png -->
+                <img
+                  src="myimage.png"
+                  alt="Portrait of Zeeshan Ali"
+                  class="profile-img"
+                  width="480"
+                  height="600"
+                />
+                <span class="status-chip">
+                  <span class="status-dot" aria-hidden="true"></span>
+                  Open to work
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT: text content -->
+          <div class="hero-content">
+            <p class="hero-greeting">Hello, I'm</p>
+            <h1 class="hero-title">Zeeshan Ali</h1>
+            <p class="hero-role">
+              <span class="sr-only">Frontend and Full Stack Developer</span>
+              <span aria-hidden="true">
+                A <span class="dynamic-type" id="dynamic-type"></span
+                ><span class="type-cursor">|</span>
+              </span>
+            </p>
+
+            <p class="hero-description">
+              I build fast, responsive interfaces with React.js and Next.js, and
+              connect them to Node.js, Express and MongoDB backends. Based in
+              Kasur, Pakistan, and finishing a BS in Information Technology.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#projects" class="btn btn-primary">
+                <span>View my projects</span>
+                <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+              </a>
+              <a
+                href="/Zeeshan_Ali_CV.pdf"
+                class="btn btn-secondary"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i>
+                <span>Download CV</span>
+              </a>
+            </div>
+
+            <ul class="hero-badges" aria-label="Main technologies">
+              <li>React.js</li>
+              <li>Next.js</li>
+              <li>JavaScript</li>
+              <li>Redux Toolkit</li>
+              <li>Node.js</li>
+              <li>MongoDB</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- STATS BAR -->
+      <section class="stats" aria-label="Highlights">
+        <div class="container stats-grid">
+          <div class="stat">
+            <div class="stat-number" data-target="4">0</div>
+            <div class="stat-label">Months as a Front-End intern</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number" data-target="2">0</div>
+            <div class="stat-label">Client sites delivered</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number" data-target="3">0</div>
+            <div class="stat-label">Featured projects</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number" data-target="3">0</div>
+            <div class="stat-label">Certifications</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT SECTION -->
+      <section id="about" class="section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">About me</h2>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-text">
+              <p class="about-lead">
+                I'm a Full Stack Developer with a strong focus on the frontend:
+                responsive, client-facing web applications that load quickly and
+                are easy to use.
+              </p>
+              <p>
+                Most of my work is in React.js and Next.js, with Redux Toolkit
+                or Context API for state and REST APIs for data. On the backend,
+                I build Node.js and Express.js APIs on MongoDB. I recently
+                completed the Codecademy Professional Certification in Back-End
+                Engineering, which covered REST APIs, SQL/PostgreSQL, web
+                security and application infrastructure and scalability.
+              </p>
+              <p>
+                I've delivered real client work, including a study-abroad
+                publishing platform and an e-commerce site with cart and admin
+                functionality. I'm currently pursuing a BS in Information
+                Technology and looking for Front-End, Full Stack, Back-End or
+                Junior Software Engineering roles.
+              </p>
+            </div>
+
+            <div class="about-side panel">
+              <h3>What I work with</h3>
+              <ul class="check-list">
+                <li>
+                  <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                  React.js and Next.js with reusable components
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                  JavaScript (ES6+) and TypeScript
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                  HTML5, CSS3 and responsive web design
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                  State with Redux Toolkit and Context API
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                  Node.js, Express.js and MongoDB backends
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS SECTION -->
+      <section id="skills" class="section section-alt">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Skills</h2>
+            <p class="section-lede">
+              Frontend is where I spend most of my time. The rest of the stack
+              is what lets me build complete features end to end.
+            </p>
+          </div>
+
+          <div class="skills-layout">
+            <!-- Primary: Frontend -->
+            <div class="skill-primary panel">
+              <h3>Frontend</h3>
+              <p>
+                Component-driven, responsive interfaces built to be reused and
+                maintained.
+              </p>
+              <ul class="chips chips-lg">
+                <li>React.js</li>
+                <li>Next.js</li>
+                <li>Vue.js</li>
+                <li>JavaScript (ES6+)</li>
+                <li>TypeScript</li>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>Responsive Web Design</li>
+                <li>Reusable Components</li>
+              </ul>
+            </div>
+
+            <!-- Secondary groups -->
+            <div class="skill-list">
+              <div class="skill-row">
+                <h3>State management</h3>
+                <ul class="chips">
+                  <li>Redux Toolkit</li>
+                  <li>Context API</li>
+                </ul>
+              </div>
+              <div class="skill-row">
+                <h3>Backend</h3>
+                <ul class="chips">
+                  <li>Node.js</li>
+                  <li>Express.js</li>
+                  <li>REST APIs</li>
+                  <li>MVC Architecture</li>
+                </ul>
+              </div>
+              <div class="skill-row">
+                <h3>Databases</h3>
+                <ul class="chips">
+                  <li>MongoDB</li>
+                  <li>Mongoose</li>
+                  <li>SQL</li>
+                  <li>PostgreSQL</li>
+                  <li>CRUD Operations</li>
+                </ul>
+              </div>
+              <div class="skill-row">
+                <h3>Security</h3>
+                <ul class="chips">
+                  <li>JWT Authentication</li>
+                  <li>Web Security</li>
+                </ul>
+              </div>
+              <div class="skill-row">
+                <h3>Tools</h3>
+                <ul class="chips">
+                  <li>Git</li>
+                  <li>GitHub</li>
+                  <li>Postman</li>
+                  <li>VS Code</li>
+                  <li>Vercel</li>
+                </ul>
+              </div>
+              <div class="skill-row">
+                <h3>Also</h3>
+                <ul class="chips">
+                  <li>Data Structures &amp; Algorithms</li>
+                  <li>Debugging</li>
+                  <li>Performance Optimisation</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS SECTION -->
+      <section id="projects" class="section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Projects</h2>
+            <p class="section-lede">
+              Two client projects and one real-world web app, from the interface
+              down to the database.
+            </p>
+          </div>
+
+          <div class="projects-grid">
+            <!-- PROJECT 1: Studyabroad (featured) -->
+            <article class="project-card project-featured">
+              <div class="shot" data-placeholder="Add projects/studyabroad.png">
+                <img
+                  src="projects/studyabroad.png"
+                  alt="Studyabroad website home page"
+                  loading="lazy"
+                />
+              </div>
+              <div class="project-body">
+                <p class="project-kind">Client project</p>
+                <h3 class="project-title">
+                  Studyabroad: scholarship &amp; study abroad platform
+                </h3>
+                <p class="project-description">
+                  A production site for scholarships, visas and study
+                  destinations. I built and deployed it with a
+                  conversion-focused layout that guides visitors from browsing
+                  destinations to getting in touch, and made it responsive and
+                  SEO-friendly.
+                </p>
+                <ul class="tags">
+                  <li>Next.js</li>
+                  <li>React</li>
+                  <li>Responsive UI</li>
+                  <li>SEO</li>
+                  <li>Vercel</li>
+                </ul>
+                <div class="project-actions">
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-primary"
+                    data-lightbox-src="projects/studyabroad.png"
+                    data-lightbox-title="Studyabroad"
+                  >
+                    <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                    View screenshot
+                  </button>
+                  <a
+                    href="https://github.com/zeeshanAli329/studyabroad"
+                    class="btn btn-sm btn-secondary"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                    GitHub
+                  </a>
+                  <!-- When you have the live URL, add: -->
+                  <a
+                    href="https://studyabroad-kohl-two.vercel.app/"
+                    class="btn btn-sm btn-secondary"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <i
+                      class="fa-solid fa-arrow-up-right-from-square"
+                      aria-hidden="true"
+                    ></i>
+                    Live site
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- PROJECT 2: E-Commerce -->
+            <article class="project-card">
+              <div class="shot" data-placeholder="Add projects/ecommerce.png">
+                <img
+                  src="projects/dormex.png"
+                  alt="E-commerce web application storefront"
+                  loading="lazy"
+                />
+              </div>
+              <div class="project-body">
+                <p class="project-kind">Full stack</p>
+                <h3 class="project-title">E-Commerce Web Application</h3>
+                <p class="project-description">
+                  A full-stack store with product listings, a shopping cart and
+                  a checkout flow. An admin panel manages products, orders and
+                  inventory through REST APIs and MongoDB.
+                </p>
+                <ul class="tags">
+                  <li>Next.js</li>
+                  <li>Node.js</li>
+                  <li>Express.js</li>
+                  <li>MongoDB</li>
+                </ul>
+                <div class="project-actions">
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-primary"
+                    data-lightbox-src="projects/dormex.png"
+                    data-lightbox-title="E-Commerce Web Application"
+                  >
+                    <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                    View screenshot
+                  </button>
+                  <a
+                    href="https://github.com/zeeshanAli329/LuxeStore"
+                    class="btn btn-sm btn-secondary"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                    GitHub
+                  </a>
+                  <a
+                    href="https://dormex-gray.vercel.app/"
+                    class="btn btn-sm btn-secondary"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <i
+                      class="fa-solid fa-arrow-up-right-from-square"
+                      aria-hidden="true"
+                    ></i>
+                    Live site
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- PROJECT 3: WorkFotos -->
+            <article class="project-card">
+              <div class="shot" data-placeholder="workfotos">
+                <img
+                  src="projects/workfotos.png"
+                  alt="WorkFotos web application"
+                  loading="lazy"
+                />
+              </div>
+              <div class="project-body">
+                <p class="project-kind">Web application</p>
+                <h3 class="project-title">WorkFotos</h3>
+                <p class="project-description">
+                  A real-world web app for organising, documenting and sharing
+                  project-based media, with a responsive, user-friendly
+                  interface.
+                </p>
+                <ul class="tags">
+                  <li>Web Application</li>
+                  <li>Media &amp; Documentation</li>
+                  <li>Responsive UI</li>
+                </ul>
+                <div class="project-actions">
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-primary"
+                    data-lightbox-src="projects/workfotos.png"
+                    data-lightbox-title="WorkFotos"
+                  >
+                    <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                    View screenshot
+                  </button>
+                  <a
+                    href="https://github.com/zeeshanAli329/Work-Fotos"
+                    class="btn btn-sm btn-secondary"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                    GitHub
+                  </a>
+                  <a
+                    href="https://work-fotos.vercel.app/"
+                    class="btn btn-sm btn-secondary"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <i
+                      class="fa-solid fa-arrow-up-right-from-square"
+                      aria-hidden="true"
+                    ></i>
+                    Live site
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- -----------PROJECT 4 : cAREER FORM ------------- -->
+            <article class="project-card project-featured">
+              <div class="shot" data-placeholder="Add projects/careerform.png">
+                <img
+                  src="projects/careerform.png"
+                  alt="career website home page"
+                  loading="lazy"
+                />
+              </div>
+              <div class="project-body">
+                <p class="project-kind">My Project</p>
+                <h3 class="project-title">
+                  Career Summary Form job application website
+                </h3>
+                <p class="project-description">
+                  A modern job application form built for Savacy Technologies to
+                  collect candidate information, professional details, and CV
+                  submissions through a simple multi-step process. The form
+                  provides a clean, responsive experience and helps streamline
+                  the candidate application process.
+                </p>
+                <ul class="tags">
+                  <li>Next.js</li>
+                  <li>React</li>
+                  <li>Responsive UI</li>
+                  <li>Vercel</li>
+                </ul>
+                <div class="project-actions">
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-primary"
+                    data-lightbox-src="projects/studyabroad.png"
+                    data-lightbox-title="Studyabroad"
+                  >
+                    <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                    View screenshot
+                  </button>
+                  <a
+                    href="https://github.com/zeeshanAli329/career-summary-form"
+                    class="btn btn-sm btn-secondary"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                    GitHub
+                  </a>
+                  <!-- When you have the live URL, add: -->
+                  <a
+                    href="https://career-summary-form.vercel.app/"
+                    class="btn btn-sm btn-secondary"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <i
+                      class="fa-solid fa-arrow-up-right-from-square"
+                      aria-hidden="true"
+                    ></i>
+                    Live site
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE & EDUCATION SECTION -->
+      <section id="experience" class="section section-alt">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Experience &amp; education</h2>
+          </div>
+
+          <div class="timeline">
+            <div class="t-item is-current">
+              <p class="t-date">Current</p>
+              <div class="t-body">
+                <h3>Full Stack Developer</h3>
+                <p class="t-org">Client &amp; independent projects</p>
+                <ul class="t-points">
+                  <li>
+                    Building full-stack apps with React.js and Next.js frontends
+                    and Node.js, Express.js and MongoDB backends.
+                  </li>
+                  <li>
+                    Working on REST APIs, database models, CRUD operations and
+                    authentication workflows.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="t-item">
+              <p class="t-date">Aug 2025 – Nov 2025</p>
+              <div class="t-body">
+                <h3>Front-End Developer Intern</h3>
+                <p class="t-org">Kavelogics Technologies</p>
+                <ul class="t-points">
+                  <li>
+                    Built responsive React.js interfaces with reusable
+                    components and integrated REST APIs for data-driven UI
+                    features.
+                  </li>
+                  <li>
+                    Managed app state with Redux Toolkit and debugged frontend
+                    and API issues to improve performance and usability.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="t-item">
+              <p class="t-date">2023 – Present</p>
+              <div class="t-body">
+                <h3>BS in Information Technology</h3>
+                <p class="t-org">University of Education, Lahore</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROCESS SECTION -->
+      <section id="process" class="section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">How I build interfaces</h2>
+          </div>
+
+          <ol class="process-list">
+            <li>
+              <span class="step-num">1</span>
+              <h3>Plan the UI</h3>
+              <p>
+                Break the design into pages and reusable components, and decide
+                where state should live before writing code.
+              </p>
+            </li>
+            <li>
+              <span class="step-num">2</span>
+              <h3>Build it responsively</h3>
+              <p>
+                Write clean HTML, CSS and React components that hold up on
+                phones, tablets and desktops.
+              </p>
+            </li>
+            <li>
+              <span class="step-num">3</span>
+              <h3>Connect the data</h3>
+              <p>
+                Integrate REST APIs and manage state with Redux Toolkit or
+                Context API, with clear loading and error states.
+              </p>
+            </li>
+            <li>
+              <span class="step-num">4</span>
+              <h3>Debug and ship</h3>
+              <p>
+                Test in the browser and Postman, tune performance, then deploy
+                to Vercel.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- CERTIFICATES SECTION -->
+      <section id="certificates" class="section section-alt">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Certifications</h2>
+          </div>
+
+          <ul class="cert-list">
+            <!-- ------cert-3----- -->
+            <li class="cert-item">
+              <div
+                class="cert-thumb"
+                data-placeholder="Certificate image missing"
+              >
+                <img
+                  src="certificates/frontend.png"
+                  alt="IBM Getting Started with Front-End and Web Development course certificate on Coursera"
+                  loading="lazy"
+                />
+              </div>
+              <div class="cert-info">
+                <h3 class="cert-title">
+                  Getting Started with Front-End and Web Development
+                </h3>
+                <p class="cert-issuer">IBM · Coursera · July 2025</p>
+                <p class="cert-desc">
+                  Course certificate authorized by IBM and offered through
+                  Coursera.
+                </p>
+              </div>
+              <button
+                type="button"
+                class="btn btn-sm btn-secondary"
+                data-lightbox-src="certificates/frontend.png"
+                data-lightbox-title="Getting Started with Front-End and Web Development (IBM, Coursera)"
+              >
+                View certificate
+              </button>
+            </li>
+            <!-- Cert 1 -->
+            <li class="cert-item">
+              <div
+                class="cert-thumb"
+                data-placeholder="Certificate image missing"
+              >
+                <img
+                  src="certificates/Backend%20Engineer%20Certificate.png"
+                  alt="Codecademy Back-End Engineer Professional Certification"
+                  loading="lazy"
+                />
+              </div>
+              <div class="cert-info">
+                <h3 class="cert-title">
+                  Back-End Engineer: Professional Certification
+                </h3>
+                <p class="cert-issuer">Codecademy · September 2026</p>
+                <p class="cert-desc">
+                  Passed four exams: Software Engineering Foundations, Back-End
+                  Development, Advanced Back-End Development, and Security,
+                  Infrastructure &amp; Scalability. Covers Node.js, Express.js,
+                  SQL, PostgreSQL, web security, data structures and algorithms.
+                </p>
+              </div>
+              <button
+                type="button"
+                class="btn btn-sm btn-secondary"
+                data-lightbox-src="certificates/Backend%20Engineer%20Certificate.png"
+                data-lightbox-title="Back-End Engineer: Professional Certification (Codecademy)"
+              >
+                View certificate
+              </button>
+            </li>
+
+            <!-- Cert 2 -->
+            <li class="cert-item">
+              <div
+                class="cert-thumb"
+                data-placeholder="Certificate image missing"
+              >
+                <img
+                  src="certificates/JavaScript%20Course%20Certificate.png"
+                  alt="Codecademy Learn JavaScript certificate of completion"
+                  loading="lazy"
+                />
+              </div>
+              <div class="cert-info">
+                <h3 class="cert-title">Learn JavaScript</h3>
+                <p class="cert-issuer">Codecademy · September 2026</p>
+                <p class="cert-desc">
+                  Certificate of Completion for finishing 100% of the Learn
+                  JavaScript course material.
+                </p>
+              </div>
+              <button
+                type="button"
+                class="btn btn-sm btn-secondary"
+                data-lightbox-src="certificates/JavaScript%20Course%20Certificate.png"
+                data-lightbox-title="Learn JavaScript (Codecademy)"
+              >
+                View certificate
+              </button>
+            </li>
+
+            <!-- Cert 3 -->
+          </ul>
+        </div>
+      </section>
+
+      <!-- CONTACT SECTION -->
+      <section id="contact" class="section">
+        <div class="container contact-grid">
+          <div class="contact-intro">
+            <h2 class="section-title">Let's build something</h2>
+            <p class="contact-desc">
+              I'm open to Front-End, Full Stack, Back-End and Junior Software
+              Engineering roles, as well as client web projects. The quickest
+              way to reach me is email.
+            </p>
+            <div class="contact-cta">
+              <a
+                href="mailto:zeeshanali976m@gmail.com"
+                class="btn btn-primary btn-lg"
+              >
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                <span>Email me</span>
+              </a>
+            </div>
+          </div>
+
+          <ul class="contact-links">
+            <li>
+              <a href="mailto:zeeshanali976m@gmail.com" class="contact-item">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                <span>zeeshanali3297624@gmail.com</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/zeeshanAli329"
+                target="_blank"
+                rel="noopener"
+                class="contact-item"
+              >
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+                <span>github.com/zeeshanAli329</span>
+              </a>
+            </li>
+            <li>
+              <!-- Replace YOUR-LINKEDIN-USERNAME with your real LinkedIn profile name -->
+              <a
+                href="https://www.linkedin.com/in/zeeshan-ali-aa55b3340/"
+                target="_blank"
+                rel="noopener"
+                class="contact-item"
+              >
+                <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                <span>LinkedIn</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://wa.me/923279430520"
+                target="_blank"
+                rel="noopener"
+                class="contact-item"
+              >
+                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                <span>+92 327 9430520</span>
+              </a>
+            </li>
+            <li class="contact-item contact-static">
+              <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+              <span>Kasur, Pakistan</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-content">
+        <p>&copy; 2026 Zeeshan Ali. All rights reserved.</p>
+        <p class="footer-subtext">Built with HTML, CSS and JavaScript.</p>
+      </div>
+    </footer>
+
+    <!-- FULLSCREEN IMAGE LIGHTBOX -->
+    <div
+      class="modal-overlay"
+      id="lightbox"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="lightbox-title"
+      aria-hidden="true"
+    >
+      <div class="modal-container">
+        <button
+          type="button"
+          class="modal-close"
+          id="lightbox-close-btn"
+          aria-label="Close preview"
+        >
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+        <h3 id="lightbox-title" class="lightbox-caption">Preview</h3>
+        <div class="lightbox-img-wrapper">
+          <img src="" alt="" id="lightbox-img" />
+          <p class="lightbox-missing">This preview isn't available yet.</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
